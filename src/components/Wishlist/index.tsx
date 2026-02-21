@@ -17,51 +17,55 @@ export const Wishlist = () => {
 
   return (
     <>
-      <Breadcrumb title={"Wishlist"} pages={["Wishlist"]} />
-      <section className="overflow-hidden py-16 sm:py-20">
-        <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
-          {wishlistItems.length > 0 ? (
-            <>
-              <div className="flex flex-wrap items-center justify-between gap-5 mb-6">
-                <h2 className="pl-3 border-l-4 border-[#FF0000] font-semibold text-dark text-xl sm:text-2xl">
-                  Your Wishlist
-                </h2>
-                <button
-                  type="button"
-                  onClick={handleClearWishlist}
-                  className="text-sm font-medium text-gray-500 hover:text-[#FF0000] transition-colors duration-200"
-                >
-                  Clear wishlist
-                </button>
-              </div>
+      <section>
+        <Breadcrumb title={"Wishlist"} pages={["Wishlist"]} />
+      </section>
+      {wishlistItems.length > 0 ? (
+        <section className="overflow-hidden py-16 sm:py-20">
+          <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
+            <div className="flex flex-wrap items-center justify-between gap-5 mb-6">
+              <h2 className="pl-3 border-l-4 border-[#FF0000] font-semibold text-dark text-xl sm:text-2xl">
+                Your Wishlist
+              </h2>
+              <button
+                type="button"
+                onClick={handleClearWishlist}
+                className="text-sm font-medium text-gray-500 hover:text-[#FF0000] transition-colors duration-200"
+              >
+                Clear wishlist
+              </button>
+            </div>
 
-              <div className="rounded-2xl border border-gray-200/80 bg-white shadow-sm overflow-hidden">
-                <div className="w-full overflow-x-auto">
-                  <div className="min-w-[1170px]">
-                    <div className="flex items-center py-4 px-5 sm:px-6 bg-gray-50/80 border-b border-gray-100">
-                      <div className="min-w-[83px]" aria-hidden />
-                      <div className="min-w-[387px]">
-                        <p className="text-sm font-semibold text-dark">Product</p>
-                      </div>
-                      <div className="min-w-[205px]">
-                        <p className="text-sm font-semibold text-dark">Unit Price</p>
-                      </div>
-                      <div className="min-w-[265px]">
-                        <p className="text-sm font-semibold text-dark">Stock Status</p>
-                      </div>
-                      <div className="min-w-[150px]">
-                        <p className="text-sm font-semibold text-dark text-right">Action</p>
-                      </div>
+            <div className="rounded-2xl border border-gray-200/80 bg-white shadow-sm overflow-hidden">
+              <div className="w-full overflow-x-auto">
+                <div className="min-w-[980px]">
+                  <div className="grid grid-cols-[50px_minmax(400px,1fr)_180px_200px_150px] items-center py-4 px-5 sm:px-6 bg-gray-50/80 border-b border-gray-100">
+                    <div aria-hidden />
+                    <div>
+                      <p className="text-sm font-semibold text-dark text-left">Product</p>
                     </div>
-
-                    {wishlistItems.map((item, key) => (
-                      <SingleItem item={item} key={key} />
-                    ))}
+                    <div>
+                      <p className="text-sm font-semibold text-dark text-left">Unit Price</p>
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-dark text-left">Stock Status</p>
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-dark text-right">Action</p>
+                    </div>
                   </div>
+
+                  {wishlistItems.map((item, key) => (
+                    <SingleItem item={item} key={key} />
+                  ))}
                 </div>
               </div>
-            </>
-          ) : (
+            </div>
+          </div>
+        </section>
+      ) : (
+        <section className="py-16 sm:py-24">
+          <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
             <div className="rounded-2xl border border-gray-200/80 bg-gray-50/30 max-w-lg mx-auto p-10 sm:p-12 text-center">
               <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-[#FF0000]/10 flex items-center justify-center">
                 <svg
@@ -88,9 +92,9 @@ export const Wishlist = () => {
                 Browse Shop
               </Link>
             </div>
-          )}
-        </div>
-      </section>
+          </div>
+        </section>
+      )}
     </>
   );
 };

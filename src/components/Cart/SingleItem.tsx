@@ -29,13 +29,13 @@ const SingleItem = ({ item }) => {
   };
 
   return (
-    <div className="flex items-center border-t border-gray-100 py-5 px-5 sm:px-6 hover:bg-gray-50/50 transition-colors duration-200">
-      <div className="min-w-[400px]">
-        <div className="flex items-center gap-4">
-          <div className="flex items-center justify-center rounded-xl bg-gray-100 border border-gray-100 max-w-[80px] w-full h-[70px] overflow-hidden flex-shrink-0">
+    <div className="grid grid-cols-[minmax(400px,1fr)_180px_275px_200px_50px] items-center border-t border-gray-100 py-5 px-5 sm:px-6 hover:bg-gray-50/50 transition-colors duration-200 min-h-[90px]">
+      <div className="flex items-center min-h-[70px] w-full min-w-0">
+        <div className="flex items-center gap-4 w-full min-w-0">
+          <div className="flex items-center justify-center rounded-xl bg-gray-100 border border-gray-100 w-[80px] h-[70px] overflow-hidden flex-shrink-0">
             <Image width={200} height={200} src={item.img} alt={item.title} className="object-contain" />
           </div>
-          <Link href="/shop" className="min-w-0">
+          <Link href="/shop" className="min-w-0 flex-1">
             <h3 className="text-dark font-medium transition-colors duration-200 hover:text-[#FF0000] line-clamp-2">
               {item.title}
             </h3>
@@ -43,11 +43,11 @@ const SingleItem = ({ item }) => {
         </div>
       </div>
 
-      <div className="min-w-[180px]">
+      <div className="flex items-center w-full">
         <p className="font-semibold text-[#FF0000]">₹{item.discountedPrice.toLocaleString("en-IN")}</p>
       </div>
 
-      <div className="min-w-[275px]">
+      <div className="flex items-center w-full">
         <div className="w-max flex items-center rounded-xl border border-gray-200 bg-gray-50/50 overflow-hidden">
           <button
             onClick={handleDecreaseQuantity}
@@ -84,15 +84,15 @@ const SingleItem = ({ item }) => {
         </div>
       </div>
 
-      <div className="min-w-[200px]">
+      <div className="flex items-center w-full">
         <p className="font-semibold text-[#FF0000]">₹{(item.discountedPrice * quantity).toLocaleString("en-IN")}</p>
       </div>
 
-      <div className="min-w-[50px] flex justify-end">
+      <div className="flex items-center justify-end w-full">
         <button
           onClick={handleRemoveFromCart}
           aria-label="Remove from cart"
-          className="flex items-center justify-center rounded-xl w-10 h-10 border border-gray-200 bg-gray-50/50 text-gray-500 transition-all duration-200 hover:bg-red-50 hover:border-red-200 hover:text-red-500"
+          className="flex items-center justify-center rounded-xl w-10 h-10 border border-gray-200 bg-gray-50/50 text-gray-500 transition-all duration-200 hover:bg-red-50 hover:border-red-200 hover:text-red-500 shrink-0"
         >
           <svg
             className="fill-current w-5 h-5"

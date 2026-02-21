@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const PromoBanner = () => {
   return (
-    <section className="overflow-hidden py-16 sm:py-20 bg-[#0f0f0f]">
+    <section className="overflow-hidden py-16 sm:py-20 bg-[#f6f6f6]">
       <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
         {/* Main banner: red gradient, diagonal split feel */}
         <div
@@ -20,7 +20,7 @@ const PromoBanner = () => {
                 Electronics, Books, Stationery & Fashion
               </span>
               <h2 className="font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] text-white leading-tight mb-4">
-                Up to 30% off — everything under ₹10,000
+                Up to 30% off — across the store
               </h2>
               <p className="text-white/80 text-base lg:text-lg mb-8 max-w-md">
                 Smart gadgets, books, stationery, and apparel. Great quality, honest prices, delivered across India.
@@ -46,12 +46,12 @@ const PromoBanner = () => {
 
         <div className="grid gap-6 grid-cols-1 lg:grid-cols-2">
           {/* Left: big typography focus */}
-          <div className="group relative overflow-hidden rounded-3xl bg-white border-2 border-gray-100 py-12 xl:py-16 px-8 sm:px-12 transition-all duration-300 hover:border-[#FF0000]/40 hover:shadow-xl">
+          <div className="group relative overflow-hidden rounded-3xl bg-[#FFF5F5] border-2 border-gray-300 py-12 xl:py-16 px-8 sm:px-12 transition-all duration-300 hover:border-[#FF0000]/40 hover:shadow-xl">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8">
               <div>
                 <span className="text-6xl sm:text-7xl lg:text-8xl font-black text-[#FF0000] leading-none">20%</span>
                 <p className="text-dark font-semibold text-lg mt-2">Books & Stationery</p>
-                <p className="text-dark-3 text-custom-sm mt-1">Office & study essentials — all under ₹10,000</p>
+                <p className="text-dark-3 text-custom-sm mt-1">Office & study essentials for home and work</p>
                 <Link href="/shop" className="inline-flex font-semibold text-custom-sm text-white bg-[#FF0000] py-2.5 px-6 rounded-lg mt-4 transition-all duration-200 hover:bg-[#CC0000]">
                   Shop Now
                 </Link>
@@ -63,9 +63,9 @@ const PromoBanner = () => {
           </div>
 
           {/* Right: stacked card with image emphasis */}
-          <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-gray-200 py-12 xl:py-16 px-8 sm:px-12 transition-all duration-300 hover:border-[#FF0000]/40 hover:shadow-xl">
+          <div className="group relative overflow-hidden rounded-3xl bg-[#F9F9FF] border-2 border-gray-200 py-12 xl:py-16 px-8 sm:px-12 transition-all duration-300 hover:border-[#FF0000]/40 hover:shadow-xl">
             <div className="flex flex-col sm:flex-row-reverse sm:items-center sm:justify-between gap-8">
-              <div className="relative w-40 h-40 sm:w-48 sm:h-48 shrink-0 rounded-2xl overflow-hidden bg-white shadow-inner">
+              <div className="relative w-40 h-40 sm:w-48 sm:h-48 shrink-0 rounded-2xl overflow-hidden">
                 <Image src="/images/HomePageImages/5.webp" alt="Fashion" fill className="object-cover transition-transform duration-300 group-hover:scale-105" sizes="192px" />
               </div>
               <div>

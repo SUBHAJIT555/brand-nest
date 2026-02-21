@@ -42,20 +42,20 @@ const Cart = () => {
               <div className="w-full overflow-x-auto">
                 <div className="min-w-[1170px]">
                   {/* table header */}
-                  <div className="flex items-center py-4 px-5 sm:px-6 bg-gray-50/80 border-b border-gray-100">
-                    <div className="min-w-[400px]">
-                      <p className="text-sm font-semibold text-dark">Product</p>
+                  <div className="grid grid-cols-[minmax(400px,1fr)_180px_275px_200px_50px] items-center py-4 px-5 sm:px-6 bg-gray-50/80 border-b border-gray-100">
+                    <div>
+                      <p className="text-sm font-semibold text-dark text-left">Product</p>
                     </div>
-                    <div className="min-w-[180px]">
-                      <p className="text-sm font-semibold text-dark">Price</p>
+                    <div>
+                      <p className="text-sm font-semibold text-dark text-left">Price</p>
                     </div>
-                    <div className="min-w-[275px]">
-                      <p className="text-sm font-semibold text-dark">Quantity</p>
+                    <div>
+                      <p className="text-sm font-semibold text-dark text-left">Quantity</p>
                     </div>
-                    <div className="min-w-[200px]">
-                      <p className="text-sm font-semibold text-dark">Subtotal</p>
+                    <div>
+                      <p className="text-sm font-semibold text-dark text-left">Subtotal</p>
                     </div>
-                    <div className="min-w-[50px]">
+                    <div>
                       <p className="text-sm font-semibold text-dark text-right">Action</p>
                     </div>
                   </div>

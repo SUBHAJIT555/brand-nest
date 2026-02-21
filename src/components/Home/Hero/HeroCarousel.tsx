@@ -26,19 +26,19 @@ const HeroCarousel = () => {
           <div className="flex-1 min-w-0 py-10 sm:py-12 lg:py-16 pl-6 sm:pl-10 lg:pl-14 pr-6 sm:pr-8">
             <div className="flex items-baseline gap-3 mb-5 sm:mb-6">
               <span className="font-bold text-4xl sm:text-5xl lg:text-6xl text-indigo-300 tracking-tight">
-                Under
+                Brand
               </span>
               <span className="font-semibold text-xl sm:text-2xl text-white/90">
-                ₹10,000
+                Nest
                 <br />
-                <span className="text-lg sm:text-xl font-medium text-white/70">Store</span>
+                <span className="text-lg sm:text-xl font-medium text-white/70">Your trusted store</span>
               </span>
             </div>
             <h1 className="font-semibold text-white text-2xl sm:text-3xl lg:text-4xl mb-3 leading-tight">
               Electronics, Stationery, Books & Garments
             </h1>
             <p className="text-slate-300 text-base sm:text-lg max-w-md mb-8">
-              Everything you need—gadgets, study supplies, books and fashion—all under ₹10,000. Quality products at great prices for India.
+              Everything you need—gadgets, study supplies, books and fashion. Quality products at great prices for India.
             </p>
             <Link
               href="/shop"
@@ -77,7 +77,7 @@ const HeroCarousel = () => {
               Electronics, Books, Stationery & More
             </h1>
             <p className="text-slate-300 text-base sm:text-lg max-w-md mb-8">
-              Shop electronics, stationery, books, garments and more—all under ₹10,000. Best deals for the Indian market.
+              Shop electronics, stationery, books, garments and more. Best deals for the Indian market.
             </p>
             <Link
               href="/shop"
