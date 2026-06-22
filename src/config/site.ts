@@ -2,9 +2,9 @@ export const siteConfig = {
   brand: {
     name: "Brand Nest",
     email: {
-      support: "support@brand-nest.com",
-      privacy: "privacy@brand-nest.com",
-      legal: "legal@brand-nest.com",
+      support: "info@brand-nest.com",
+      privacy: "info@brand-nest.com",
+      legal: "info@brand-nest.com",
       general: "info@brand-nest.com",
     },
     phone: "+91 9876543210",
