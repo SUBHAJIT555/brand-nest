@@ -335,7 +335,6 @@ const ShopWithoutSidebar = ({ products }: ShopWithoutSidebarProps) => {
               )}
             </div>
           </div>
-        </div>
       </section>
     </>
   );

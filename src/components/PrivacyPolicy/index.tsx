@@ -157,7 +157,7 @@ const PrivacyPolicy = () => {
                   Third-Party Links
                 </h2>
                 <p className="text-gray-600">
-                  Our website may link to third-party sites (e.g. payment or social media). {siteConfig.brand.name} is not responsible for the privacy or content of those sites. We recommend reading their privacy policies before sharing your information.
+                  Our website may link to third-party sites (e.g. payment gateways). {siteConfig.brand.name} is not responsible for the privacy or content of those sites. We recommend reading their privacy policies before sharing your information.
                 </p>
               </div>
 

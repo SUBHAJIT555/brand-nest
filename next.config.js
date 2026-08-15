@@ -4,6 +4,9 @@ const nextConfig = {
     images: {
       unoptimized: true,
     },
+    turbopack: {
+      root: __dirname,
+    },
  async rewrites() {
     if (process.env.NODE_ENV !== 'development') {
       return { beforeFiles: [], afterFiles: [], fallback: [] }
@@ -12,8 +15,12 @@ const nextConfig = {
     return {
       beforeFiles: [
         {
+          source: '/mail.php',
+          destination: 'http://localhost/ecom/mail.php',
+        },
+        {
           source: '/api/submit.php',
-          destination: 'http://localhost/ecom/api/submit.php',
+          destination: 'http://localhost/ecom/mail.php',
         },
       ],
       afterFiles: [],
